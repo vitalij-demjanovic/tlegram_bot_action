@@ -1,10 +1,13 @@
-import start from "./src/start";
-import { startData } from "./prisma/seed";
+import { TelegrafBot } from "./src/start";
 
 class App {
+  bot: TelegrafBot;
+
+  constructor() {
+    this.bot = new TelegrafBot()
+  }
   async init() {
-    await startData();
-    await start;
+    await this.bot.init();
   }
 }
 
