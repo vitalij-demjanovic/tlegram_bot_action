@@ -16,7 +16,7 @@ const startAction = [
   },
 ];
 
-export const startData = async () => {
+const startData = async () => {
   await prisma.$connect();
   const createCity = await prisma.city.create({ data: startCity });
   await prisma.action.createMany({
@@ -24,3 +24,5 @@ export const startData = async () => {
   });
   await prisma.$disconnect();
 };
+
+startData();
