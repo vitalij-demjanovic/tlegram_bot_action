@@ -22,19 +22,19 @@ model Action {
   id          Int           @id @default(autoincrement())
   title       String
   description String
-  dataStart   String
-  dataEnd     String
+  dataStart   DateTime
+  dataEnd     DateTime
   city        City          @relation(fields: [cityId], references: [id])
   cityId      Int
   createdAt   DateTime      @default(now())
   updateAt    DateTime      @default(now())
-  ActionOnTag ActionOnTag[]
+  actionOnTag ActionOnTag[]
 }
 
 model Tag {
   id          Int           @id @default(autoincrement())
   name        String
-  ActionOnTag ActionOnTag[]
+  actionOnTag ActionOnTag[]
 }
 
 model ActionOnTag {

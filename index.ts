@@ -1,15 +1,15 @@
-import { TelegrafBot } from "./src/start";
+import { App } from "./src/app";
 
-class App {
-  bot: TelegrafBot;
+class Main {
+  app: App
 
   constructor() {
-    this.bot = new TelegrafBot()
+    this.app = new App()
   }
   async init() {
-    await this.bot.init();
+    await this.app.bot();
   }
 }
 
-const app = new App();
+const app = new Main();
 app.init();

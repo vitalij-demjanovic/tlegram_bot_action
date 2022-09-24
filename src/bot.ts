@@ -1,17 +1,17 @@
 import "dotenv/config";
 import { Telegraf } from "telegraf";
 
-export class TelegrafBot {
-  token: any;
+export class Bot {
+  token: string;
   bot: Telegraf
 
   constructor() {
-    this.token = process.env.TOKEN
+    this.token = process.env.TOKEN as string
     this.bot = new Telegraf(this.token)
   }
 
 
-  start() {
+  intiCommand() {
     this.bot.command('start', (ctx) => {
       ctx.reply("Hello. How can I help you? :)");
     })
@@ -19,6 +19,6 @@ export class TelegrafBot {
 
   public async init() {
     await this.bot.launch()
-    await this.start();
+    this.intiCommand();
   }
 }
