@@ -5,13 +5,14 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "seed" : "node dist/prisma/seed.js"
+    "seed": "node dist/prisma/seed.js"
   },
   "author": "vito_dev",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "dotenv": "^16.0.2",
-    "telegraf": "^4.9.2"
+    "telegraf": "^4.9.2",
+    "telegraf-session-local": "^2.1.0"
   }
 }
