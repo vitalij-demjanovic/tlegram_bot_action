@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const startCity = {
-  name: "Kežmarok",
+  name: "Kezmarok",
 };
 
 const startAction = [
@@ -11,8 +11,8 @@ const startAction = [
     title: "Reds Crew Challenge 2022",
     description:
       "Dvojdňová súťaž v krásnom prostredí pod Vysokými Tatrami s množstvom rôznorodých workoutov. Srdečne Ťa pozývame na komplexnú previerku Tvojich schopností a zručností v riateľskej atmosfére Našej komunity.",
-    dataStart: "22. October",
-    dataEnd: "23. October",
+    dataStart: new Date(2022, 10, 22, 8),
+    dataEnd: new Date(2022, 10, 23, 22)
   },
 ];
 

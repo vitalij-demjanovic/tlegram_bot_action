@@ -1,14 +1,13 @@
 import { Bot } from "./bot";
 import { Database } from "./db";
 
-
 export class App {
     _bot: Bot
     _db: Database
 
     constructor() {
-        this._bot = new Bot()
         this._db = new Database()
+        this._bot = new Bot()
     }
 
     async bot() {
