@@ -11,7 +11,7 @@ export class App {
     }
 
     async bot() {
-        await this._db.connectDB()
-        await this._bot.intiCommand();
+        await this._db.connectDB();
+        await this._bot.botStart();
     }
 }
